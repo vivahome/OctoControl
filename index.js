@@ -1,7 +1,13 @@
 // OctoControl
+var printers = new Object();
 
 window.onload = function(){
-  switchView("home");
+  // check for printers
+  if(localStorage.getItem("savedPrinters") === null){
+    // show modal about adding printers
+  }else {
+    switchView("home");
+  }
 };
 
 function switchView(newView){
